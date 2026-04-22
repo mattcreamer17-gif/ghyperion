@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ghyperion &middot; A read on where AI actually fits in the stack</title>
+<meta name="description" content="Gerardo. Saw the Miami post from last spring, the Oppenheimer intro, and the landing page. I have a hunch about where Ghyperion forms cleanest." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
+<link rel="icon" href="logo.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="https://www.ghyperion.com/" target="_blank" rel="noopener" aria-label="Ghyperion home">
+      <img src="logo.png" alt="Ghyperion mark" class="brand__mark" width="32" height="32" />
+      <span class="brand__word">Ghyperion</span>
+    </a>
+    <span class="topbar__meta">Prepared for Gerardo Calder&oacute;n Huerta. eMerge Americas, booth SS68.</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">A working note, not a pitch.</p>
+      <h1 class="hero__title">
+        A read on where AI actually fits in Ghyperion&rsquo;s stack. And where it does not.
+      </h1>
+      <p class="hero__lede">
+        Building the infrastructure beneath global trade is a category. The wedge is the question. This page is one read on where the wedge forms cleanest.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Opening</h2>
+      <p>
+        Ghyperion is early. The landing page is a tagline, the Miami trip was last spring, and the Oppenheimer mentorship and the eMerge SS booth say the next twelve months are about getting a product into paying hands and closing a first check. That is a specific moment. The decisions made in it compound.
+      </p>
+      <p>
+        "Infrastructure beneath global trade" is a category, not a wedge. The question is which workflow inside that category is worth building first, and inside that workflow, which parts are genuinely AI problems.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--muted">
+    <div class="container prose">
+      <h2>The frame</h2>
+      <p>
+        Most teams building in this space spend too much on LLM calls and not enough on Postgres. The rough split in our experience.
+      </p>
+      <ul class="split">
+        <li>
+          <span class="split__figure">60%</span>
+          <span class="split__label">Traditional code and database work. User accounts, document storage, filing state machines, payment ledgers.</span>
+        </li>
+        <li>
+          <span class="split__figure">30%</span>
+          <span class="split__label">Rule-based logic. Tariff classification rules, customs-filing validation, compliance checks that have to be deterministic and auditable.</span>
+        </li>
+        <li>
+          <span class="split__figure">10%</span>
+          <span class="split__label">Genuine AI. Document parsing for messy invoices and bills of lading, HS-code suggestions where the operator still confirms, edge-case reconciliation.</span>
+        </li>
+      </ul>
+      <p>
+        Teams who skip this distinction put an LLM where a SQL query would be faster, cheaper, and defensible in an audit.
+      </p>
+      <p>
+        Applied to Ghyperion: the right first product is probably a single document-heavy workflow where the customs broker or the SMB exporter is losing hours a week to manual re-entry. AI sits on top of the parsing. Rules sit under the filing. Postgres sits under all of it.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>The case study</h2>
+      <p>
+        We ran a founder-level sprint with Andrew Santus at Feeld. Workshop, advisory calls, Organizational Context Architecture, Strategic Operations Framework. The output was not a deck. It was a clear map of which parts of the product needed LLM infrastructure and which parts did not. That mapping is most of the work at a stage where the wrong architecture decision costs a quarter.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--muted">
+    <div class="container prose">
+      <h2>The paper</h2>
+      <p>
+        The methodology is published. The Interpretable Context Methodology (ICM), submitted to ACM TiiS. It is the framework we would apply to Ghyperion&rsquo;s orchestration layer. Repo: <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">github.com/RinDig/Interpretable-Context-Methodology-ICM-</a>.
+      </p>
+      <h2>The community line</h2>
+      <p>
+        Jake also built an online community to 22,000 members in five weeks. Distribution instinct travels.
+      </p>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="container">
+      <h2 class="cta__title">Thirty minutes with Matt.</h2>
+      <p class="cta__body">
+        Matt Creamer, CRO at Eduba. Bring one workflow you would ship first. We will map which layer each piece of it belongs on. AI on top. Rules under. Postgres at the floor.
+      </p>
+      <a class="cta__button" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+        Book 30 minutes with Matt
+      </a>
+      <p class="cta__fine">
+        Eduba partners with <span class="nlp">NLP Logix</span> for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__line">Prepared by Eduba. <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a></p>
+    <p class="footer__meta">For Ghyperion &middot; eMerge Americas 2026 &middot; Booth SS68</p>
+  </div>
+</footer>
+</body>
+</html>
